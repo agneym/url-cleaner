@@ -1,6 +1,25 @@
 :root {
   --base-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  background-color: var(--primary-background);
+  color: var(--default-text);
+
   /* Background Colors */
   --primary-background: #F9F9F9;
 
@@ -13,18 +32,15 @@ body.dark {
   --default-text: #F9F3EE;
 }
 
-html, body, #root {
-  height: 100%;
-}
-
-body {
-  font-family: var(--base-font);
-  line-height: 1.5;
-  margin: 0;
-  background-color: var(--primary-background);
-  color: var(--default-text);
-}
-
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+body, input {
+  font-family: var(--base-font);
+}
+
+input {
+  font-size: inherit;
+  color: inherit;
 }

@@ -14,14 +14,17 @@
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    min-width: 100%;
+    max-width: 20rem;
+    position: relative;
+    top: -5rem;
   }
 
   .input {
-    all: unset;
     background-color: var(--color-background);
     border: 1px solid aliceblue;
     padding: 4px 8px;
-    min-width: max(100%, 20rem);
+    max-width: 100%;
     border-radius: 0.35rem;
   }
 </style>
