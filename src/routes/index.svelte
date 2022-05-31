@@ -2,7 +2,7 @@
   <title>URL Cleaner</title>
 </svelte:head>
 
-<h1>Paste URL here</h1>
+<h1>URL Cleaner</h1>
 <style>
 
 </style>
