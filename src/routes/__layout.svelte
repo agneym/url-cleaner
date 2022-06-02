@@ -4,6 +4,7 @@
 <div class="container">
   <slot></slot>
 </div>
+<Toast />
 
 <style>
   .container {
@@ -15,4 +16,5 @@
 
 <script global>
   import "../global.css";
+  import Toast from '..components/Toast.svelte'; 
 </script>
