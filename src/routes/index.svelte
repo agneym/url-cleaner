@@ -4,7 +4,7 @@
 
 <main class="container">
   <h1 class="title">URL Cleaner</h1>
-  <input class="input" type="url" placeholder="Enter URL" />
+  <Form />
 </main>
 
 <style>
@@ -19,15 +19,8 @@
     position: relative;
     top: -5rem;
   }
-
-  .input {
-    background-color: var(--color-background);
-    border: 1px solid aliceblue;
-    padding: 4px 8px;
-    max-width: 100%;
-    border-radius: 0.35rem;
-  }
 </style>
 
 <script>
+  import Form from "../components/Form.svelte";
 </script>

@@ -40,7 +40,7 @@ body, input {
   font-family: var(--base-font);
 }
 
-input {
+input, button {
   font-size: inherit;
   color: inherit;
 }
