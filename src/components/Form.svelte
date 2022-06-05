@@ -31,6 +31,8 @@
 </style>
 
 <script>
+  import { notifications } from "../lib/notifications";
+
   function extractFields(event) {
     const formEl = event.target;
     const formData = new FormData(formEl);
@@ -47,7 +49,8 @@
   function onSubmit(event) {
     const data = extractFields(event);
     const { url } = data;
-    cleanUrl(url);
+    const cleanedUrl = cleanUrl(url);
+    notifications.success(cleanedUrl, 3000);
   }
 
   /**

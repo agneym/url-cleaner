@@ -1,10 +1,12 @@
 import { writable, derived } from "svelte/store";
 import { uniqueId } from "lodash";
 
+const DEFAULT_TIMEOUT = 3000;
+
 function createNotificationStore() {
   const _notifications = writable([]);
 
-  function send(message, type = "default", timeout) {
+  function send(message, type = "default", timeout = DEFAULT_TIMEOUT) {
     _notifications.update((state) => {
       return [...state, { id: uniqueId(), type, message, timeout }];
     });
@@ -18,7 +20,7 @@ function createNotificationStore() {
           state.shift();
           return state;
         });
-      }, $_notifications[0].timeout);
+      }, $_notifications[0].timeout ?? DEFAULT_TIMEOUT);
       return () => {
         clearTimeout(timer);
       };
