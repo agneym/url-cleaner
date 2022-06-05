@@ -5,28 +5,38 @@
 
 <style>
   .container {
+    --rounded: 0.35rem;
     display: flex;
+  }
+
+  .container:focus-within {
+    outline: 1px solid hsl(0deg 0% 100% / 20%);
+    border-radius: var(--rounded);
   }
 
   .input {
     background-color: var(--color-background);
-    border: 1px solid aliceblue;
+    border: 1px solid #5f6368;
     padding: 4px 8px;
     max-width: 100%;
-    border-top-left-radius: 0.35rem;
-    border-bottom-left-radius: 0.35rem;
+    border-top-left-radius: var(--rounded);
+    border-bottom-left-radius: var(--rounded);
     border-right-width: 0;
   }
 
+  .input {
+    outline: none;
+  }
+
   .button {
-    border-top-right-radius: 0.35rem;
-    border-bottom-right-radius: 0.35rem;
+    border-top-right-radius: var(--rounded);
+    border-bottom-right-radius: var(--rounded);
     padding: 6px 8px;
-    text-transform: uppercase;
-    background-color: var(--primary-background);
-    border-color: aliceblue;
+    background-color: #303134;
+    border: 1px solid #5f6368;
     box-shadow: none;
     cursor: pointer;
+    color: #e8eaed;
   }
 </style>
 
