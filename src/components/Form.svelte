@@ -25,19 +25,22 @@
     text-transform: uppercase;
     background-color: var(--primary-background);
     border-color: aliceblue;
+    box-shadow: none;
     cursor: pointer;
   }
 </style>
 
 <script>
   function extractFields(event) {
-    const formData = new FormData(event.target);
+    const formEl = event.target;
+    const formData = new FormData(formEl);
 
     const data = {};
     for (let field of formData) {
       const [key, value] = field;
       data[key] = value;
     }
+    formEl.reset();
     return data;
   }
 

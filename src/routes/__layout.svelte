@@ -16,5 +16,5 @@
 
 <script global>
   import "../global.css";
-  import Toast from '..components/Toast.svelte'; 
+  import Toast from '../components/Toast.svelte'; 
 </script>

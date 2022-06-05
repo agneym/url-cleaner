@@ -28,8 +28,8 @@ body {
 }
 
 body.dark {
-  --primary-background: #180A0A;
-  --default-text: #F9F3EE;
+  --primary-background: #202124;
+  --default-text: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6, p {
