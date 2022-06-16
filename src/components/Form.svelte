@@ -19,6 +19,7 @@
     border: 1px solid #5f6368;
     padding: 4px 8px;
     max-width: 100%;
+    font-size: 18px;
     border-top-left-radius: var(--rounded);
     border-bottom-left-radius: var(--rounded);
     border-right-width: 0;
@@ -41,7 +42,9 @@
 </style>
 
 <script>
-  import { notifications } from "../lib/notifications";
+  import { createEventDispatcher } from 'svelte';
+  
+  const dispatch = createEventDispatcher();
 
   function extractFields(event) {
     const formEl = event.target;
@@ -59,17 +62,6 @@
   function onSubmit(event) {
     const data = extractFields(event);
     const { url } = data;
-    const cleanedUrl = cleanUrl(url);
-    notifications.success(cleanedUrl, 3000);
-  }
-
-  /**
-   * Remove any query parameters from the URL.
-   * @param url {string}
-   */
-  function cleanUrl(url) {
-    const urlObj = new URL(url);
-    urlObj.search = "";
-    return urlObj.toString();
+    dispatch("submit", url);
   }
 </script>

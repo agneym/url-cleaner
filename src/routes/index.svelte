@@ -4,7 +4,7 @@
 
 <main class="container">
   <h1 class="title">URL Cleaner</h1>
-  <Form />
+  <Form on:submit={handleUrl} />
 </main>
 
 <style>
@@ -23,4 +23,19 @@
 
 <script>
   import Form from "../components/Form.svelte";
+
+  /**
+   * Remove any query parameters from the URL.
+   * @param url {string}
+   */
+  function cleanUrl(url) {
+    const urlObj = new URL(url);
+    urlObj.search = "";
+    return urlObj.toString();
+  }
+
+  function handleUrl(event) {
+    const { detail: url } = event;
+    const cleanedUrl = cleanUrl(url);
+  }
 </script>
