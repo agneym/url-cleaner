@@ -1,10 +1,35 @@
+<script>
+  import Form from "../components/Form.svelte";
+  import ShowUrl from "../components/ShowUrl.svelte";
+  let cleanedUrl;
+
+  /**
+   * Remove any query parameters from the URL.
+   * @param url {string}
+   */
+  function cleanUrl(url) {
+    const urlObj = new URL(url);
+    urlObj.search = "";
+    return urlObj.toString();
+  }
+
+  function handleUrl(event) {
+    const { detail: url } = event;
+    cleanedUrl = cleanUrl(url);
+  }
+</script>
+
 <svelte:head>
   <title>URL Cleaner</title>
 </svelte:head>
 
 <main class="container">
   <h1 class="title">URL Cleaner</h1>
-  <Form on:submit={handleUrl} />
+  {#if !cleanedUrl}
+    <Form on:submit={handleUrl} />
+  {:else}
+    <ShowUrl url={cleanedUrl} />
+  {/if}
 </main>
 
 <style>
@@ -20,22 +45,3 @@
     top: -5rem;
   }
 </style>
-
-<script>
-  import Form from "../components/Form.svelte";
-
-  /**
-   * Remove any query parameters from the URL.
-   * @param url {string}
-   */
-  function cleanUrl(url) {
-    const urlObj = new URL(url);
-    urlObj.search = "";
-    return urlObj.toString();
-  }
-
-  function handleUrl(event) {
-    const { detail: url } = event;
-    const cleanedUrl = cleanUrl(url);
-  }
-</script>
