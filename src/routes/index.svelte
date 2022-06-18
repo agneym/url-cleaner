@@ -23,7 +23,7 @@
   <title>URL Cleaner</title>
 </svelte:head>
 
-<main class="container">
+<main class="box">
   <h1 class="title">URL Cleaner</h1>
   {#if !cleanedUrl}
     <Form on:submit={handleUrl} />
@@ -33,14 +33,13 @@
 </main>
 
 <style>
-  .container {
+  .box {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     gap: 2rem;
     min-width: 100%;
-    max-width: 20rem;
     position: relative;
     top: -5rem;
   }

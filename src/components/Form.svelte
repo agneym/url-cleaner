@@ -1,15 +1,15 @@
-<form class="container" on:submit|preventDefault={onSubmit}>
+<form class="box" on:submit|preventDefault={onSubmit}>
   <input class="input" type="url" placeholder="Enter URL" name="url" />
   <button class="button" type="submit">Clean</button>
 </form>
 
 <style>
-  .container {
+  .box {
     --rounded: 0.35rem;
     display: flex;
   }
 
-  .container:focus-within {
+  .box:focus-within {
     outline: 1px solid hsl(0deg 0% 100% / 20%);
     border-radius: var(--rounded);
   }

@@ -1,13 +1,5 @@
-<section class="container">
-  <h2 class="heading">Your cleaned URL</h2>
-  <p>{url}</p>
-  <button class="button" type="button" on:click={copyToClipboard}
-    >Copy to Clipboard</button
-  >
-</section>
-
 <script>
-  import {notifications} from '../lib/notifications.js';
+  import { notifications } from "../lib/notifications.js";
 
   export let url;
 
@@ -20,13 +12,25 @@
       await navigator.clipboard.writeText(url);
       notifications.success("Copied to the clipboard");
     } catch (err) {
-      notifications.danger('Failed to copy!', err)
+      notifications.danger("Failed to copy!", err);
     }
   }
 </script>
 
+<section class="box">
+  <h2 class="heading">Your cleaned URL</h2>
+  <p>{url}</p>
+  <div class="btn-box">
+    <button class="button outline secondary" type="button" on:click={copyToClipboard}
+    >Copy to clipboard</button
+  >
+    <button class="button outline secondary" type="button">Share</button>
+  </div>
+  <button class="btn">Clean another URL</button>
+</section>
+
 <style>
-  .container {
+  .box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,8 +39,8 @@
   .heading {
     color: #5f6368;
   }
-  .button {
-    all: unset;
-    cursor: pointer;
+  .btn-box {
+    display: flex; 
+    gap: 10px;
   }
 </style>
