@@ -68,7 +68,7 @@ Clean another URL
   .btn-box {
     display: flex; 
     gap: 10px;
-    width: 100%;
+    width: min(100%, 24rem);
   }
   .btn-box > .button {
     flex-grow: 1;
