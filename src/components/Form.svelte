@@ -1,12 +1,16 @@
 <form class="box" on:submit|preventDefault={onSubmit}>
   <input class="input" type="url" placeholder="Enter URL" name="url" />
-  <button class="button" type="submit">Clean</button>
+  <button class="button" type="submit" aria-label="Clean"> 
+    <CleanIcon />
+  </button>
 </form>
 
 <style>
   .box {
     --rounded: 0.35rem;
+    --spacing: 0;
     display: flex;
+    margin: 0 auto;
   }
 
   .box:focus-within {
@@ -23,25 +27,26 @@
     border-top-left-radius: var(--rounded);
     border-bottom-left-radius: var(--rounded);
     border-right-width: 0;
-  }
-
-  .input {
+    flex-grow: 1;
     outline: none;
   }
 
   .button {
     border-top-right-radius: var(--rounded);
     border-bottom-right-radius: var(--rounded);
-    padding: 6px 8px;
+    padding: 0 15px;
     background-color: #303134;
     border: 1px solid #5f6368;
     box-shadow: none;
     cursor: pointer;
+    color: white;
+    width: auto;
   }
 </style>
 
 <script>
   import { createEventDispatcher } from 'svelte';
+  import CleanIcon from "../icons/clean.svelte";
   
   const dispatch = createEventDispatcher();
 

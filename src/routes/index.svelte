@@ -41,10 +41,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 2rem;
     min-width: 100%;
-    position: relative;
-    top: -5rem;
   }
 </style>

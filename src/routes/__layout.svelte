@@ -8,9 +8,11 @@
 
 <style>
   .box {
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    place-content: center;
+    padding: 0 20px;
   }
 </style>
 

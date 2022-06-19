@@ -1,6 +1,6 @@
 <section class="box">
   <h2 class="heading">Your cleaned URL</h2>
-  <p>{url}</p>
+  <p class="url-display">{url}</p>
   <div class="btn-box">
     <button class="button outline contrast" type="button" on:click={copyToClipboard}
     >Copy to clipboard</button
@@ -51,6 +51,12 @@
     flex-direction: column;
     align-items: center;
     gap: 20px 0;
+  }
+  .url-display {
+    font-size: 14px;
+    color: white;
+    white-space: normal;
+    word-break: break-all;
   }
   .btn-box {
     display: flex; 
