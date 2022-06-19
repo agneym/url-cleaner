@@ -1,5 +1,5 @@
 import { writable, derived } from "svelte/store";
-import { uniqueId } from "lodash";
+import uniqueId from "lodash/uniqueId.js";
 
 const DEFAULT_TIMEOUT = 3000;
 
