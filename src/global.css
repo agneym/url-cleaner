@@ -31,16 +31,3 @@ body.dark {
   --primary-background: #202124;
   --default-text: #FFFFFF;
 }
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-body, input {
-  font-family: var(--base-font);
-}
-
-input, button {
-  font-size: inherit;
-  color: inherit;
-}

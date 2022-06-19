@@ -37,7 +37,6 @@
     border: 1px solid #5f6368;
     box-shadow: none;
     cursor: pointer;
-    color: #e8eaed;
   }
 </style>
 
