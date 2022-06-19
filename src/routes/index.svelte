@@ -3,6 +3,10 @@
   import ShowUrl from "../components/ShowUrl.svelte";
   let cleanedUrl;
 
+  function clearUrl() {
+    cleanedUrl = null;
+  }
+
   /**
    * Remove any query parameters from the URL.
    * @param url {string}
@@ -28,7 +32,7 @@
   {#if !cleanedUrl}
     <Form on:submit={handleUrl} />
   {:else}
-    <ShowUrl url={cleanedUrl} />
+    <ShowUrl url={cleanedUrl} on:clear={clearUrl} />
   {/if}
 </main>
 

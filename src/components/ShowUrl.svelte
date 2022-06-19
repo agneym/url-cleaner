@@ -2,16 +2,20 @@
   <h2 class="heading">Your cleaned URL</h2>
   <p>{url}</p>
   <div class="btn-box">
-    <button class="button outline secondary" type="button" on:click={copyToClipboard}
+    <button class="button outline contrast" type="button" on:click={copyToClipboard}
     >Copy to clipboard</button
   >
-    <button class="button outline secondary" type="button">Share</button>
+    <button class="button outline contrast" type="button" on:click={shareUrl}>Share</button>
   </div>
-  <button class="button">Clean another URL</button>
+  <button class="button" on:click={clearUrl}>Clean another URL</button>
 </section>
 
 <script>
+  import { createEventDispatcher } from 'svelte';
+
   import { notifications } from "../lib/notifications.js";
+
+  const dispatch = createEventDispatcher();
 
   export let url;
 
@@ -26,6 +30,18 @@
     } catch (err) {
       notifications.danger("Failed to copy!", err);
     }
+  }
+
+  async function shareUrl() {
+    try {
+      await navigator.share({ url });
+    } catch(err) {
+      notifications.danger("Failed to share!", err);
+    }
+  }
+
+  function clearUrl() {
+    dispatch("clear");
   }
 </script>
 
