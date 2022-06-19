@@ -1,17 +1,22 @@
 <section class="box">
-  <h2 class="heading">Your cleaned URL</h2>
-  <p class="url-display">{url}</p>
+  <h2 class="heading">Your URL 🔗</h2>
+  <button class="clear-button" type="button" on:click={copyToClipboard}>
+    <p>{url}</p>
+  </button>
   <div class="btn-box">
-    <button class="button outline contrast" type="button" on:click={copyToClipboard}
-    >Copy to clipboard</button
-  >
-    <button class="button outline contrast" type="button" on:click={shareUrl}>Share</button>
+    <button class="button outline contrast" type="button" on:click={shareUrl}>
+      <ShareIcon />
+      Share
+    </button>
+    <button class="button" type="button" on:click={clearUrl}>
+Clean another URL
+  </button>
   </div>
-  <button class="button" on:click={clearUrl}>Clean another URL</button>
 </section>
 
 <script>
   import { createEventDispatcher } from 'svelte';
+  import ShareIcon from "../icons/share.svelte";
 
   import { notifications } from "../lib/notifications.js";
 
@@ -52,14 +57,20 @@
     align-items: center;
     gap: 20px 0;
   }
-  .url-display {
+  .clear-button {
     font-size: 14px;
     color: white;
     white-space: normal;
     word-break: break-all;
+    all: unset;
+    cursor: pointer;
   }
   .btn-box {
     display: flex; 
     gap: 10px;
+    width: 100%;
+  }
+  .btn-box > .button {
+    flex-grow: 1;
   }
 </style>
