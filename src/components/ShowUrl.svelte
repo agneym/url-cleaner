@@ -4,7 +4,7 @@
     <p>{url}</p>
   </button>
   <div class="btn-box">
-    <button class="button outline contrast" type="button" on:click={shareUrl}>
+    <button class="button outline" type="button" on:click={shareUrl}>
       <ShareIcon />
       Share
     </button>
@@ -59,14 +59,17 @@ Clean another URL
   }
   .heading {
     --typography-spacing-vertical: 20px;
+    color: var(--text-default);
   }
   .clear-button {
     font-size: 14px;
-    color: white;
     white-space: normal;
     word-break: break-all;
     all: unset;
     cursor: pointer;
+  }
+  .clear-button > p {
+    color: var(--default-text);
   }
   .btn-box {
     display: flex; 

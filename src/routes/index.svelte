@@ -46,4 +46,7 @@
     gap: 2rem;
     min-width: 100%;
   }
+  .title {
+    color: var(--primary);
+  }
 </style>

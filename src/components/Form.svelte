@@ -1,5 +1,5 @@
 <form class="box" on:submit|preventDefault={onSubmit}>
-  <input class="input" type="url" placeholder="Enter URL" name="url" />
+  <input class="input" type="url" placeholder="Enter URL" name="url" required />
   <button class="button" type="submit" aria-label="Clean"> 
     <CleanIcon />
   </button>
@@ -33,13 +33,13 @@
   }
 
   .button {
-    border: 1px solid #5f6368;
+    border: 1px solid var(--primary);
     border-top-right-radius: var(--rounded);
     border-bottom-right-radius: var(--rounded);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding: 0 15px;
-    background-color: #303134;
+    background-color: var(--primary);
     box-shadow: none;
     cursor: pointer;
     color: white;

@@ -22,6 +22,8 @@ body {
 
   /* Background Colors */
   --primary-background: #F9F9F9;
+  --primary: hsl(174deg 62% 47%);
+  --primary-hover: hsl(174deg 62% 42%);
 
   /* Text Colors */
   --default-text: #333333;
