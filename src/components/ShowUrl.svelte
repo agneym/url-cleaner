@@ -57,6 +57,9 @@ Clean another URL
     align-items: center;
     gap: 20px 0;
   }
+  .heading {
+    --typography-spacing-vertical: 20px;
+  }
   .clear-button {
     font-size: 14px;
     color: white;

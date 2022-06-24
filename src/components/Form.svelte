@@ -24,6 +24,7 @@
     padding: 4px 8px;
     max-width: 100%;
     font-size: 18px;
+    border-radius: 0;
     border-top-left-radius: var(--rounded);
     border-bottom-left-radius: var(--rounded);
     border-right-width: 0;
@@ -32,11 +33,13 @@
   }
 
   .button {
+    border: 1px solid #5f6368;
     border-top-right-radius: var(--rounded);
     border-bottom-right-radius: var(--rounded);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     padding: 0 15px;
     background-color: #303134;
-    border: 1px solid #5f6368;
     box-shadow: none;
     cursor: pointer;
     color: white;

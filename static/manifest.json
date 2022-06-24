@@ -24,5 +24,12 @@
   "display": "standalone",
   "scope": "/",
   "theme_color": "#3367D6",
-  "description": "Remove the Pesky query parameters from your URLs. Leave them short and simple instead of revealing trade secrets."
+  "description": "Remove the Pesky query parameters from your URLs. Leave them short and simple instead of revealing trade secrets.",
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "url": "url"
+    }
+  }
 }
