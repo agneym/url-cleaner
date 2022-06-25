@@ -20,10 +20,10 @@
       "purpose": "maskable"
     }
   ],
-  "background_color": "#3367D6",
+  "background_color": "#FFF",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3367D6",
+  "theme_color": "#2ec2b3",
   "description": "Remove the Pesky query parameters from your URLs. Leave them short and simple instead of revealing trade secrets.",
   "share_target": {
     "action": "/",
