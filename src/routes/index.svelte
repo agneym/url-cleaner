@@ -27,14 +27,18 @@
   <title>URL Cleaner</title>
 </svelte:head>
 
-<main class="box">
-  <h1 class="title">URL Cleaner</h1>
-  {#if !cleanedUrl}
-    <Form on:submit={handleUrl} />
-  {:else}
-    <ShowUrl url={cleanedUrl} on:clear={clearUrl} />
-  {/if}
-</main>
+<div class="box">
+  <header>
+    <h1 class="title">URL Cleaner</h1>
+  </header>
+  <main>
+    {#if !cleanedUrl}
+      <Form on:submit={handleUrl} />
+    {:else}
+      <ShowUrl url={cleanedUrl} on:clear={clearUrl} />
+    {/if}
+  </main>
+</div>
 
 <style>
   .box {
