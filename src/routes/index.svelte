@@ -1,4 +1,5 @@
 <script>
+  import Head from "../components/Head.svelte";
   import Form from "../components/Form.svelte";
   import ShowUrl from "../components/ShowUrl.svelte";
   let cleanedUrl;
@@ -23,10 +24,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>URL Cleaner</title>
-</svelte:head>
-
+<Head />
 <div class="box">
   <header>
     <h1 class="title">URL Cleaner</h1>
